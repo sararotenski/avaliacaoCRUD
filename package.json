@@ -1,0 +1,26 @@
+{
+  "name": "avaliacaocrud",
+  "version": "1.0.0",
+  "description": "CRUD avaliação",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silvasTairo/AvaliacaoCRUD.git"
+  },
+  "author": "Tairo Pureza da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silvasTairo/AvaliacaoCRUD/issues"
+  },
+  "homepage": "https://github.com/silvasTairo/AvaliacaoCRUD#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}
