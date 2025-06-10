@@ -53,6 +53,19 @@ async function insertCustomer(customer) {
     await client.query(sql, values);
 }
 
+// Função para editar/atualizar clientes
+async function updateCustomer(id, customer) {
+  // Estabelecer conexão
+  const client = await connect();
+  // query
+  const sql = "UPDATE client SET nome=$1, idade=$2, profissao=$3 WHERE cpf=$4";
+  // parâmetros que devem ser injetados na consulta
+  const values = [customer.nome, customer.idade,
+  customer.profissao, id];
+  
+  await client.query(sql, values);
+  }
+
 // Função para excluir cliente
 async function deleteCustomer(id) {
   // Estabelecer conexão
@@ -68,5 +81,6 @@ module.exports = {
     insertCustomer,
     selectCustomers,
     selectCustomer,
-    deleteCustomer
+    deleteCustomer,
+    updateCustomer
 }

@@ -28,9 +28,19 @@ res.json(cliente);
 
 // Rota para inserir clientes
 app.post("/client", async (req, res) => {
+    console.log("req.body === >> ", req.body)
     await db.insertCustomer(req.body);
     res.status(201);
 })
+
+// Rota para editar/atualizar cliente
+app.patch("/client/:id", async (req, res) => {
+    
+    await db.updateCustomer(req.params.id, req.body)
+    res.sendStatus(200) // 200 é o código de
+    
+    atualização
+    })
 
 // Rota para excluir cliente
 app.delete("/client/:id", async (req, res) => {
